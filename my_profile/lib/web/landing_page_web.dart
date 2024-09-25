@@ -79,15 +79,30 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             Spacer(
               flex: 3,
             ),
-            TabsWeb("Home"),
+            TabsWeb(
+              title: "Home",
+              route: "/",
+            ),
             Spacer(),
-            TabsWeb("Works"),
+            TabsWeb(
+              title: "Works",
+              route: "/works",
+            ),
             Spacer(),
-            TabsWeb("Blog"),
+            TabsWeb(
+              title: "Blog",
+              route: "/blog",
+            ),
             Spacer(),
-            TabsWeb("About"),
+            TabsWeb(
+              title: "About",
+              route: "/route",
+            ),
             Spacer(),
-            TabsWeb("Contact"),
+            TabsWeb(
+              title: "Contact",
+              route: "/contact",
+            ),
             Spacer(),
           ],
         ),
@@ -129,7 +144,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       "Ussama Irfan",
                       55.0,
                     ),
-                    Sans("Software Developer", 30.0),
+                    Sans("Front-end Developer", 30.0),
                     SizedBox(
                       height: 15.0,
                     ),
@@ -222,7 +237,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       height: 15.0,
                     ),
                     Sans(
-                      "Hello! Ussama here. I specialize in Software Development",
+                      "Hello! Ussama here. I specialize in Front-end Development",
                       15.0,
                     ),
                     Sans(
@@ -364,18 +379,18 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    AnimatedCardWeb(
+                    AnimatedCard(
                       imagePath: "assets/webL.png",
                       text: "Web development",
                       reverse: false,
                     ),
-                    AnimatedCardWeb(
+                    AnimatedCard(
                       imagePath: "assets/app.png",
                       text: "App development",
                       fit: BoxFit.contain,
                       reverse: true,
                     ),
-                    AnimatedCardWeb(
+                    AnimatedCard(
                       imagePath: "assets/firebase.png",
                       text: "Back-end development",
                       reverse: false,
@@ -402,16 +417,16 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     Column(
                       children: [
                         TextForm(
-                          heading: "First Name",
-                          width: 350.0,
+                          text: "First Name",
+                          containerWidth: 350.0,
                           hintText: "Please type your first name",
                         ),
                         SizedBox(
                           height: 15.0,
                         ),
                         TextForm(
-                          heading: "Email",
-                          width: 350.0,
+                          text: "Email",
+                          containerWidth: 350.0,
                           hintText: "Please type your email address",
                         ),
                       ],
@@ -419,16 +434,16 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     Column(
                       children: [
                         TextForm(
-                          heading: "Last Name",
-                          width: 350.0,
+                          text: "Last Name",
+                          containerWidth: 350.0,
                           hintText: "Please type your last name",
                         ),
                         SizedBox(
                           height: 15.0,
                         ),
                         TextForm(
-                          heading: "Phone Number",
-                          width: 350.0,
+                          text: "Phone Number",
+                          containerWidth: 350.0,
                           hintText: "Please type phone number",
                         ),
                       ],
@@ -436,8 +451,8 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   ],
                 ),
                 TextForm(
-                  heading: "Message",
-                  width: deviceWidth / 1.55,
+                  text: "Message",
+                  containerWidth: deviceWidth / 1.55,
                   hintText: "Please type your message",
                   maxLines: 10,
                 ),
