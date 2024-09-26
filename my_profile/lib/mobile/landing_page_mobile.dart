@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_profile/components.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_svg/svg.dart';
 
 class LandingPageMobile extends StatefulWidget {
   const LandingPageMobile({super.key});
@@ -12,21 +10,6 @@ class LandingPageMobile extends StatefulWidget {
 }
 
 class _LandingPageMobileState extends State<LandingPageMobile> {
-  urlLauncher(String imgPath, String url) {
-    return IconButton(
-      icon: SvgPicture.asset(
-        imgPath,
-        width: 35.0,
-        color: Colors.black,
-      ),
-      onPressed: () async {
-        await launchUrl(
-          Uri.parse(url),
-        );
-      },
-    );
-  }
-
   tealContainer(String text) {
     return Container(
       decoration: BoxDecoration(

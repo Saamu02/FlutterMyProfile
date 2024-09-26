@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_svg/svg.dart';
 
 class TabsMobile extends StatefulWidget {
   final text;
@@ -223,7 +225,7 @@ class _AnimatedCardState extends State<AnimatedCard>
   late AnimationController _controller = AnimationController(
     vsync: this,
     duration: const Duration(
-      seconds: 4,
+      seconds: 2,
     ),
   )..repeat(reverse: true);
 
@@ -272,4 +274,19 @@ class _AnimatedCardState extends State<AnimatedCard>
       ),
     );
   }
+}
+
+urlLauncher(String imgPath, String url) {
+  return IconButton(
+    icon: SvgPicture.asset(
+      imgPath,
+      width: 35.0,
+      color: Colors.black,
+    ),
+    onPressed: () async {
+      await launchUrl(
+        Uri.parse(url),
+      );
+    },
+  );
 }
