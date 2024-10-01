@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_profile/mobile/about_mobile.dart';
 import 'package:my_profile/mobile/contact_mobile.dart';
 import 'package:my_profile/mobile/landing_page_mobile.dart';
+import 'package:my_profile/web/about_web.dart';
 import 'package:my_profile/web/contact_web.dart';
 import 'package:my_profile/web/landing_page_web.dart';
 
@@ -35,6 +37,19 @@ class Routes {
           ),
         );
 
+      case '/about':
+        return MaterialPageRoute(
+          settings: settings,
+          builder: (_) => LayoutBuilder(
+            builder: (context, constraints) {
+              if (constraints.maxWidth > 800) {
+                return AboutWeb();
+              } else {
+                return AboutMobile();
+              }
+            },
+          ),
+        );
       default:
         // Return a fallback route if the route name is unknown
         return MaterialPageRoute(

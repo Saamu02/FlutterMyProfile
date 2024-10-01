@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:my_profile/components.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class LandingPageWeb extends StatefulWidget {
   const LandingPageWeb({super.key});
@@ -11,21 +9,6 @@ class LandingPageWeb extends StatefulWidget {
 }
 
 class _LandingPageWebState extends State<LandingPageWeb> {
-  urlLauncher(String imgPath, String url) {
-    return IconButton(
-      icon: SvgPicture.asset(
-        imgPath,
-        width: 35.0,
-        color: Colors.black,
-      ),
-      onPressed: () async {
-        await launchUrl(
-          Uri.parse(url),
-        );
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     var deviceHeight = MediaQuery.of(context).size.height;
@@ -96,7 +79,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             Spacer(),
             TabsWeb(
               title: "About",
-              route: "/route",
+              route: "/about",
             ),
             Spacer(),
             TabsWeb(

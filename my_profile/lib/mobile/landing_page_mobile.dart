@@ -111,20 +111,20 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
       ),
       body: ListView(
         children: [
+          CircleAvatar(
+            radius: 117.0,
+            backgroundColor: const Color.fromRGBO(100, 255, 218, 1),
+            child: CircleAvatar(
+              radius: 110.0,
+              backgroundColor: Colors.white,
+              backgroundImage: AssetImage("assets/pic_1.jpg"),
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
-                  radius: 117.0,
-                  backgroundColor: const Color.fromRGBO(100, 255, 218, 1),
-                  child: CircleAvatar(
-                    radius: 110.0,
-                    backgroundColor: Colors.white,
-                    backgroundImage: AssetImage("assets/pic_1.jpg"),
-                  ),
-                ),
                 SizedBox(
                   height: 25.0,
                 ),
@@ -152,7 +152,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                 ),
                 SizedBox(height: 15.0),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Wrap(
                       direction: Axis.vertical,
@@ -180,9 +180,9 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
           ),
           SizedBox(height: 90.0),
           Padding(
-            padding: EdgeInsets.only(left: 20.0),
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SansBold("About me", 35.0),
